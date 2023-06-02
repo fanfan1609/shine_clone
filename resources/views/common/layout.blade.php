@@ -16,10 +16,21 @@
 	<meta property="og:url" content="{{config('web.url')}}">
 	<meta property="og:site_name" content="{{config('web.site_name')}}">
 	<meta name="twitter:card" content="summary_large_image">
+	<link rel="icon" href="images/cropped-shinerogo2-2-32x32.png" sizes="32x32">
+	<link rel="icon" href="images/cropped-shinerogo2-2-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="images/cropped-shinerogo2-2-180x180.png">
+	@include('common.ga')
+	@include('common.css')
+	<noscript>
+		<link href="/css/noscript.css" rel="stylesheet">
+	</noscript>
+	@yield('css')
 </head>
-
-    <body>
-        
-    </body>
+<body>
+@include('common.svg')
+@yield('content')
+@include('common.js')
+@yield('script')
+</body>
     
 </html>
